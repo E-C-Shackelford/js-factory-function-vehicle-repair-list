@@ -41,3 +41,12 @@ button.addEventListener("click", function () {
     return vehicle.needsRepair === true;
   });
 
+  // loop over the vehicleRepairList array to access each object
+  for (let vehicle of vehicleRepairList) {
+    // result of the loop should create a list item
+    let li = document.createElement("li");
+    li.innerHTML = `My <span>${vehicle.type}</span> needs some 🧡`;
+    // append the list to the repairList element
+    repairList.append(li);
+  }
+});
