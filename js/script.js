@@ -12,3 +12,11 @@ const createVehicle = function (type, numWheel, color) {
   };
   return vehicle;
 };
+
+// create three new objects
+const car = createVehicle("car", 4, "silver");
+const bike = createVehicle("bike", 2, "blue");
+const vespa = createVehicle("Vespa", 2, "grey");
+
+// add the three objects to an array
+const myVehicles = [car, bike, vespa];
