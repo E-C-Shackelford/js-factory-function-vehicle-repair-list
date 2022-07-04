@@ -27,3 +27,17 @@ for (let vehicle of myVehicles) {
     console.log(key, vehicle[key]);
   }
 }
+
+// add a property called needsRepair to both the bike and vespa objects and set the values to true
+bike.needsRepair = true;
+vespa.needsRepair = true;
+
+button.addEventListener("click", function () {
+  // enable the text to be cleared each time the button is clicked
+  repairList.innerHTML = "";
+
+  // grab the repair list by creating an array that only contains the vehicle objects from the myVehicles array that have a needsRepair property of true
+  const vehicleRepairList = myVehicles.filter(function (vehicle) {
+    return vehicle.needsRepair === true;
+  });
+
