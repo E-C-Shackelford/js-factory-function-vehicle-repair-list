@@ -20,3 +20,10 @@ const vespa = createVehicle("Vespa", 2, "grey");
 
 // add the three objects to an array
 const myVehicles = [car, bike, vespa];
+
+// loop over the array of objects, then loop over the properties and values of each object, and log them out to the console
+for (let vehicle of myVehicles) {
+  for (let key in vehicle) {
+    console.log(key, vehicle[key]);
+  }
+}
